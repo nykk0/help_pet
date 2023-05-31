@@ -182,3 +182,28 @@ nav {
     cursor: pointer;
 }
 
+/* FOOTER */
+footer{
+    display: flex;
+    background-color: #F1E2C6;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    padding: 50px;
+}
+.footer{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+.footer ul{
+    list-style: none;
+}
+.footer h1{
+    font-size: 1.3rem;
+}
+
+.footer .rede-sociais i{
+    font-size: 2rem;
+}
+
