@@ -176,7 +176,7 @@ session_start();
                 <h1>Ofertas Especiais</h1>
                 <div class="ofertas-container">
                     <div class="card-ofertas">
-                        <h1>Arranhador para Gatos</h1>
+                        <h1>Petiscos para cães</h1>
                         <div class="img">
                             <img src="images/pug.png" alt="">
                         </div>
