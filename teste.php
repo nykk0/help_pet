@@ -3,6 +3,7 @@
 <head>
     <title>Tela de Login</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/048c0de736.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="custom-header">
@@ -11,7 +12,13 @@
         <nav>
             <ul id="nav_links">
                 <li><a href="index.html">Inicio</a></li>
-                <li>Categorias</li>
+                <li>Categorias
+                    <ul class="submenu">
+                        <li><a href="login_empresa.php">Pessoa Juridica</a></li>
+                        <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
+                        <li><a href="teste.php">PET</a></li>
+                    </ul>
+                </li>
                 <li>
                     Cadastre-se
                     <ul class="submenu">
