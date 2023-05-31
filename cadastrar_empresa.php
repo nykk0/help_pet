@@ -24,6 +24,7 @@ if(isset($_POST["cadastrar"]))
 <head>
     <title>Cadastro de Empresa</title>
     <link rel="stylesheet" href="css/cadastrar_empresa.css">
+    <script src="https://kit.fontawesome.com/048c0de736.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
