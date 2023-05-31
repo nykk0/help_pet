@@ -117,13 +117,14 @@ if(isset($_POST["cadastrar"]))
 
                 <div>
                     <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" required>
+                    <input type="password" id="senha" name="senha" required oninput="removerMensagemErro('senha-error')">
+                    <span id="senha-error" class="error-message"></span>
                 </div>
             </div>
 
             <div class="linha-1">
                 <label for="confirmar_senha">Confirmar Senha:</label>
-                <input type="password" id="confirmar_senha" name="confirmar_senha" required>  
+                <input type="password" id="confirmar_senha" name="confirmar_senha" required oninput="removerMensagemErro('senha-error')">
             </div>
     
             <input type="submit" name="cadastrar" value="Cadastrar">
@@ -161,16 +162,20 @@ if(isset($_POST["cadastrar"]))
 </footer>
 </body>
 <script>
+
     function validarFormulario() {
         var senha = document.getElementById("senha").value;
         var confirmarSenha = document.getElementById("confirmar_senha").value;
 
         if (senha !== confirmarSenha) {
-            alert("A senha e a confirmação de senha não correspondem.");
+            document.getElementById("senha-error").textContent = "A senha e a confirmação de senha não correspondem.";
             return false;
         }
 
         return true;
+    }
+    function removerMensagemErro(elementId) {
+        document.getElementById(elementId).textContent = "";
     }
 </script>
 </html>
