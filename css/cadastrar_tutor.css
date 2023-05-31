@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+    font-size: 62,5%;
+    font-family: 'Poppins', sans-serif;
+  }
 *{
     box-sizing: border-box;
     padding:0;
@@ -70,6 +76,7 @@ header {
 
 .form {
     margin-top: 100px;
+    margin-bottom: 80px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -80,9 +87,9 @@ header {
     justify-content: space-between;
   }
   .form-box .img{
-    width: 350px;
+    width: 40rem;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
   }
   .form-box img{
@@ -99,7 +106,11 @@ header {
   .form-box form div{
     width: 100%;
   }
-  
+  .linha-1{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+  }
   .linha-1 input{
       width: 100%;
       height: 30px;

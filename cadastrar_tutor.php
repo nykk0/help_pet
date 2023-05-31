@@ -65,16 +65,20 @@ if(isset($_POST["cadastrar"]))
     </div>
 
 </header>
+
 <h1>Cadastro de Tutor</h1>
 <div class="form">
     <div class="container">
         <div class="form-box">
         <form action="cadastrar_tutor.php" method="POST" onsubmit="return validarFormulario()">
 
-        <div>
-            <label for="nome">Nome Completo:</label>
-            <input type="text" id="nome" name="nome" required>
+        <div class="linha-1">
+            <div>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>  
         </div>
+
         <div class="linha-2">
             <div>
                 <label for="data_nasc">Data de Nascimento:</label>
@@ -119,35 +123,31 @@ if(isset($_POST["cadastrar"]))
                 <label for="logradouro">Logradouro:</label>
                 <input type="text" id="logradouro" name="logradouro" required>
             </div>
-        </div>
-
-        <div>
+            
             <div>
                 <label for="complemento">Complemento:</label>
                 <input type="text" id="complemento" name="complemento" required>
             </div>
-
             <div>
                 <label for="numero">Número:</label>
                 <input type="text" id="numero" name="numero" required>
             </div>
-        </div>
-       
-        <div class="linha-1">
             <div>
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" required oninput="removerMensagemErro('senha-error')">
                 <span id="senha-error" class="error-message"></span>
             </div>
-
             <div>
                 <label for="confirmar_senha">Confirmar Senha:</label>
                 <input type="password" id="confirmar_senha" name="confirmar_senha" required oninput="removerMensagemErro('senha-error')">
             </div>
         </div>
         <input type="submit" name="cadastrar" value="Cadastrar">
-    </form>
-    </div>
+        </form>
+        <div class="img">
+            <img src="images/meninaCachorro.png" alt="">
+        </div>
+        </div>
     </div>
 </div>
 </body>
