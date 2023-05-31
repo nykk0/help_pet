@@ -76,45 +76,37 @@ if(isset($_POST["cadastrar"]))
 
         <div class="linha-1">
             <div>
-                <label for="nome">Nome Completo:</label>
+                <label for="nome">Nome da Empresa:</label>
                 <input type="text" id="nome" name="nome" required>
             </div>  
         </div>
 
         <div class="linha-2">
             <div>
-                <label for="data_nasc">Data de Nascimento:</label>
-                <input type="date" id="data_nasc" name="data_nasc" required>
-            </div>
-            <div>
                 <label for="cnpj">CNPJ:</label>
                 <input type="text" id="cnpj" name="cnpj" required oninput="mascaraCNPJ(this.value);removerMensagemErro('cpf-error')" >
                 <span id="cpf-error" class="error-message"></span>
-            </div>
-            
-            <div>
-                <label for="email">E-mail:</label>
-                <input type="text" id="email" name="email" required>
-            </div>
-    
-            <div>
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone" required>
             </div>
 
             <div>
                 <label for="cep">CEP:</label>
                 <input type="text" id="cep" name="cep" required oninput="mascaraCEP(this.value)">
             </div>
+
             <div>
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+    
+            <div>          
                 <label for="estado">Estado:</label>
                 <input type="text" id="estado" name="estado" required>
             </div>
-            <div>
-                <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade" required>
-            </div>
 
+            <div>
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+            </div>
             <div>
                 <label for="bairro">Bairro:</label>
                 <input type="text" id="bairro" name="bairro" required>
@@ -126,7 +118,8 @@ if(isset($_POST["cadastrar"]))
                 <label for="logradouro">Logradouro:</label>
                 <input type="text" id="logradouro" name="logradouro" required>
             </div>
-            
+        </div>
+        <div class="linha-2">
             <div>
                 <label for="complemento">Complemento:</label>
                 <input type="text" id="complemento" name="complemento" required>
@@ -147,8 +140,9 @@ if(isset($_POST["cadastrar"]))
         </div>
         <input type="submit" name="cadastrar" value="Cadastrar">
         </form>
+
         <div class="img">
-            <img src="images/meninaCachorro.png" alt="">
+            <img src="images/casinha.png" alt="">
         </div>
         </div>
     </div>
@@ -156,30 +150,19 @@ if(isset($_POST["cadastrar"]))
 
 <!-- <h1>Cadastro de Empresa</h1>
 <form action="cadastrar_empresa.php" method="POST" onsubmit="return validarFormulario()">
-    <label for="nome">Nome da Empresa:</label>
-    <input type="text" id="nome" name="nome" required>
 
-    <label for="cnpj">CNPJ:</label>
-    <input type="text" id="cnpj" name="cnpj" required oninput="mascaraCNPJ(this.value);removerMensagemErro('cpf-error')" >
-    <span id="cpf-error" class="error-message"></span>
 
-    <label for="email">E-mail:</label>
-    <input type="text" id="email" name="email" required>
 
-    <label for="telefone">Telefone:</label>
-    <input type="text" id="telefone" name="telefone" required>
 
-    <label for="cep">CEP:</label>
-    <input type="text" id="cep" name="cep" required oninput="mascaraCEP(this.value)">
 
-    <label for="estado">Estado:</label>
-    <input type="text" id="estado" name="estado" required>
 
-    <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro" name="bairro" required>
+    
 
-    <label for="logradouro">Logradouro:</label>
-    <input type="text" id="logradouro" name="logradouro" required>
+ 
+
+
+
+
 
     <label for="complemento">Complemento:</label>
     <input type="text" id="complemento" name="complemento" required>
