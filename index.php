@@ -48,7 +48,7 @@ session_start();
                     <li>Usuario : <?php echo $_SESSION["nome"];?>
                       </li>
                 <form method="post">
-                    <li class="unstyled-link"><button type="submit" name="logout">Sair</button></li>
+                    <li class="unstyled-link"><button type="submit" name="logout" id="logout">Sair</button></li>
                 </form>
                 <?php }?>
                 <div class="item-links">
