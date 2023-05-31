@@ -17,13 +17,14 @@ session_start();
         <img src="images/logo.png" alt="CACHORRO" width="100">
         <nav>
             <ul id="nav_links">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li>Categorias
                     <ul class="submenu">
                         <li><a href="">Pessoa Juridica</a></li>
                         <li><a href="">Gatos</a></li>
                         <li><a href="">Peixes</a></li>
                     </ul></li>
+                <?php if(!isset($_SESSION["nome"]) && empty($_SESSION["nome"])){ ?>
                 <li>
                     Cadastre-se
                     <ul class="submenu">
@@ -36,8 +37,9 @@ session_start();
                     <ul class="submenu">
                         <li><a href="login_empresa.php">Pessoa Juridica</a></li>
                         <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
-                        <li><a href="teste.php">PET</a></li>
+                        <li><a href="login_pet.php">PET</a></li>
                     </ul></li>
+                <?php }?>
                 <div class="item-links">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -150,10 +152,10 @@ session_start();
                     <h1>Categorias Mais Procuradas</h1>
                     <div class="card-container">
                         <div class="card-categoria-procurada">
-                            <img src="images/gato3.png" alt="">
+                            <img src="images/gato3.png" alt="" width="300" height="200" >
                         </div>
                         <div class="card-categoria-procurada">
-                            <img src="images/dog_pelucia.png" alt="" >
+                            <img src="images/dog_pelucia.png" alt="" height="180">
                         </div>
                     </div>
                 </div>

@@ -18,23 +18,83 @@ if(isset($_POST["entrar"]))
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login de Tutor</title>
-    <link rel="stylesheet" href="css/login_tutor.css">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/048c0de736.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Login de Tutor</h1>
-<form action="login_tutor.php" method="POST" >
+<header class="custom-header">
+    <div class="container header">
+        <img src="images/logo.png" alt="CACHORRO" width="100">
+        <nav>
+            <ul id="nav_links">
+                <li><a href="index.php">Inicio</a></li>
+                <li>Categorias
+                    <ul class="submenu">
+                        <li><a href="login_empresa.php">Pessoa Juridica</a></li>
+                        <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
+                        <li><a href="teste.php">PET</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Cadastre-se
+                    <ul class="submenu">
+                        <li><a href="">Pessoa Juridica</a></li>
+                        <li><a href="">Gatos</a></li>
+                        <li><a href="">Peixes</a></li>
+                    </ul>
+                </li>
+                <li>Entrar
+                    <ul class="submenu">
+                        <li><a href="login_empresa.php">Pessoa Juridica</a></li>
+                        <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
+                        <li><a href="teste.php">PET</a></li>
+                    </ul></li>
+                <div class="item-links">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+            </ul>
+        </nav>
+    </div>
 
-    <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" name="cpf" required oninput="mascaraCPF(this.value);">
-    <span id="cpf-error" class="error-message"></span>
+</header>
+<section class="hero-section">
+    <div class="container">
+        <div class="hero">
+            <form action="login_tutor.php" method="POST" >
+                <div class="image">
+                    <div class="login">
+                        <div class="login-form">
+                            <h1>Acesse sua conta</h1>
+                            <label for="cpf">E-mail ou CPF:</label>
+                            <input type="text" id="cpf" name="cpf" required oninput="mascaraCPF(this.value);">
+                            <span id="cpf-error" class="error-message"></span>
 
-    <label for="senha">Senha:</label>
-    <input type="password" id="senha" name="senha" required>
-    <span id="senha-error" class="error-message"></span>
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" name="senha" required>
+                            <span id="senha-error" class="error-message"></span>
+                            <button class="botao-login" name="entrar">Entrar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
-    <input type="submit" name="entrar" value="entrar">
-</form>
+            <div class="search-content">
+                <div class="text">
+                    <h1>Te ajudando sempre, independente de onde estiver! </h1>
+                    <p>Com a sua conta da Help Pet você tem acessoa Ofertas exclusivas, descontos, pode criare gerenciar a sua Assinatura Help Pet, acompanharos seus pedidos, marcar consultas e muito mais!</p>
+                </div>
+
+                <a href="cadastrar_tutor.php" class="botao-cadastrar">Cadastrar</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 </body>
 <script>
 
@@ -51,14 +111,5 @@ if(isset($_POST["entrar"]))
         }
     }
 
-
-
-
-
-
-
-
-
 </script>
 </html>
-
