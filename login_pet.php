@@ -39,9 +39,9 @@ if(isset($_POST["entrar"]))
                 <li>
                     Cadastre-se
                     <ul class="submenu">
-                        <li><a href="">Pessoa Juridica</a></li>
-                        <li><a href="">Gatos</a></li>
-                        <li><a href="">Peixes</a></li>
+                        <li><a href="cadastrar_empresa.php">Pessoa Juridica</a></li>
+                        <li><a href="cadastrar_tutor.php">Pessoa Fisíca</a></li>
+                        <li><a href="cadastrar_pet.php">PET</a></li>
                     </ul>
                 </li>
                 <li>Entrar

@@ -33,13 +33,14 @@ if(isset($_POST["cadastrar"]))
         <img src="images/logo.png" alt="CACHORRO" width="100">
         <nav>
             <ul id="nav_links">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li>Categorias
                     <ul class="submenu">
-                        <li><a href="login_empresa.php">Pessoa Juridica</a></li>
-                        <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
-                        <li><a href="teste.php">PET</a></li>
-                    </ul></li>
+                        <li><a href="">Cachorro</a></li>
+                        <li><a href="">Gatos</a></li>
+                        <li><a href="">Peixes</a></li>
+                    </ul>
+                </li>
                 <li>
                     Cadastre-se
                     <ul class="submenu">
@@ -52,7 +53,7 @@ if(isset($_POST["cadastrar"]))
                     <ul class="submenu">
                         <li><a href="login_empresa.php">Pessoa Juridica</a></li>
                         <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
-                        <li><a href="teste.php">PET</a></li>
+                        <li><a href="login_pet.php">PET</a></li>
                     </ul></li>
                 <div class="item-links">
                     <i class="fa-solid fa-magnifying-glass"></i>

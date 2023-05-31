@@ -33,13 +33,14 @@ if(isset($_POST["cadastrar"]))
         <img src="images/logo.png" alt="CACHORRO" width="100">
         <nav>
             <ul id="nav_links">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.php">Inicio</a></li>
                 <li>Categorias
                     <ul class="submenu">
-                        <li><a href="login_empresa.php">Pessoa Juridica</a></li>
-                        <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
-                        <li><a href="teste.php">PET</a></li>
-                    </ul></li>
+                        <li><a href="">Cachorro</a></li>
+                        <li><a href="">Gatos</a></li>
+                        <li><a href="">Peixes</a></li>
+                    </ul>
+                </li>
                 <li>
                     Cadastre-se
                     <ul class="submenu">
@@ -52,7 +53,7 @@ if(isset($_POST["cadastrar"]))
                     <ul class="submenu">
                         <li><a href="login_empresa.php">Pessoa Juridica</a></li>
                         <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
-                        <li><a href="teste.php">PET</a></li>
+                        <li><a href="login_pet.php">PET</a></li>
                     </ul></li>
                 <div class="item-links">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -135,7 +136,29 @@ if(isset($_POST["cadastrar"]))
     </div>
     
 </div>
+<footer>
+    <div class="container footer">
+        <h1>Logo</h1>
 
+        <ul class="companhia">
+            <h1>Companhia</h1>
+            <li>sobre nós</li>
+            <li>FAQ</li>
+            <li>Contato</li>
+        </ul>
+        <ul class="legal">
+            <h1>Legal</h1>
+            <li>Política de Privacidade</li>
+            <li>Termos e Condições</li>
+            <li>Política de Cookie</li>
+        </ul>
+        <ul class="rede-sociais">
+            <h1>Redes Sociais</h1>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </ul>
+    </div>
+</footer>
 </body>
 <script>
     function validarFormulario() {
