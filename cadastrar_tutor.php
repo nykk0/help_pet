@@ -151,6 +151,29 @@ if(isset($_POST["cadastrar"]))
         </div>
     </div>
 </div>
+<footer>
+    <div class="container footer">
+        <h1>Logo</h1>
+
+        <ul class="companhia">
+            <h1>Companhia</h1>
+            <li>sobre nós</li>
+            <li>FAQ</li>
+            <li>Contato</li>
+        </ul>
+        <ul class="legal">
+            <h1>Legal</h1>
+            <li>Política de Privacidade</li>
+            <li>Termos e Condições</li>
+            <li>Política de Cookie</li>
+        </ul>
+        <ul class="rede-sociais">
+            <h1>Redes Sociais</h1>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </ul>
+    </div>
+</footer>
 </body>
 <script>
     function validarFormulario() {
