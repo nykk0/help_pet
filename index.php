@@ -1,8 +1,13 @@
-<!-- <?php
+ <?php
 session_start();
-var_dump($_SESSION);die();
-
-?> -->
+//var_dump($_SESSION["nome"]);die();
+ if (isset($_POST['logout'])) {
+     // Destrói todas as sessões
+     session_destroy();
+     echo '<script>alert("Logout realizado com sucesso!"); window.location.href = "index.php";</script>';
+     exit();
+ }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,11 +25,11 @@ var_dump($_SESSION);die();
                 <li><a href="index.php">Inicio</a></li>
                 <li>Categorias
                     <ul class="submenu">
-                        <li><a href="">Pessoa Juridica</a></li>
+                        <li><a href="">Cachorro</a></li>
                         <li><a href="">Gatos</a></li>
                         <li><a href="">Peixes</a></li>
                     </ul></li>
-                <?php if(!isset($_SESSION["nome"]) && empty($_SESSION["nome"])){ ?>
+                <?php if(!isset($_SESSION["nome"])){ ?>
                 <li>
                     Cadastre-se
                     <ul class="submenu">
@@ -39,6 +44,12 @@ var_dump($_SESSION);die();
                         <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
                         <li><a href="login_pet.php">PET</a></li>
                     </ul></li>
+                <?php } else{?>
+                    <li>Usuario : <?php echo $_SESSION["nome"];?>
+                      </li>
+                <form method="post">
+                    <li class="unstyled-link"><button type="submit" name="logout">Sair</button></li>
+                </form>
                 <?php }?>
                 <div class="item-links">
                     <i class="fa-solid fa-magnifying-glass"></i>
