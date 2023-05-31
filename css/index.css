@@ -59,6 +59,27 @@ header {
     margin: 0 4px;
   }
 
+    #nav_links a {
+        text-decoration: none;
+        color: black;
+  }
+
+.submenu {
+    display: none;
+    position: absolute;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    list-style-type: none;
+    background-color: #FFFDEE;
+}
+
+
+#nav_links li:hover .submenu {
+    display: block; /* Mostra o submenu quando o item do menu é hover */
+}
+
+
+
 /* HERO */
 .hero-section{
     margin-top: 60px;
@@ -166,6 +187,31 @@ header {
     align-items: center;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.reptil {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 200px;
+    align-items: center;
+}
+
+.passaro {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    width: 200px;
+    align-items: center;
+}
+
+.peixe {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-left: 25px;
+    width: 200px;
+    align-items: center;
+}
 .card-categoria p{
     font-size: 1rem;
     font-weight: 600;
@@ -214,15 +260,18 @@ header {
     font-size: 0.8rem;
     border-radius: 17px;
     box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
-} 
+}
 .card-servico div{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; 
+    gap: 20px;
 }
 .card-servico i{
     font-size: 1rem;
+}
+.card-servico img {
+    border-radius: 17px;
 }
 
 .categorias-procuradas{
@@ -274,6 +323,8 @@ header {
     padding: 0 15px;
     border-radius: 200px;
 }
+
+
 .card-ofertas button{
     padding: 15px 30px;
     border-radius: 30px;
