@@ -69,12 +69,14 @@ if(isset($_POST["cadastrar"]))
 <div class="form">
     <div class="contaner">
         <div class="form-box">
-            <h1>Cadastro de Pet</h1>
             <form action="cadastrar_pet.php" method="POST" onsubmit="return validarFormulario()">
+
+            <h1>Cadastro de Pet</h1>
             <div class="linha-1">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
             </div>
+
             <div class="linha-2">
                 <div>
                     <label for="data_nasc">Data de Nascimento:</label>
@@ -89,7 +91,9 @@ if(isset($_POST["cadastrar"]))
                 <div>
                     <label for="categoria">Categoria:</label>
                     <input type="text" id="categoria" name="categoria" required>    
+                </div>
 
+                <div>
                     <label for="porte">Porte:</label>
                     <input type="text" id="porte" name="porte" required>    
                 </div>
@@ -98,7 +102,9 @@ if(isset($_POST["cadastrar"]))
                 <div>
                     <label for="tutor">Tutor:</label>
                     <input type="text" id="tutor" name="tutor" required>    
+                </div>
 
+                <div>
                     <label for="raca">Raça:</label>
                     <input type="text" id="raca" name="raca" required>  
                 </div>
@@ -106,11 +112,12 @@ if(isset($_POST["cadastrar"]))
                 <div>
                     <label for="usuario">Usuário:</label>
                     <input type="text" id="usuario" name="usuario" required>    
+                </div>
 
+                <div>
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>
                 </div>
-
             </div>
 
             <div class="linha-1">
@@ -119,11 +126,14 @@ if(isset($_POST["cadastrar"]))
             </div>
     
             <input type="submit" name="cadastrar" value="Cadastrar">
-
+            
             </form>
+            <div class="img">
+                <img src="images/cachorro_login.png" alt="">
+            </div>
         </div>
     </div>
-  
+    
 </div>
 
 </body>

@@ -24,56 +24,132 @@ if(isset($_POST["cadastrar"]))
 <head>
     <title>Cadastro de Tutor</title>
     <link rel="stylesheet" href="css/cadastrar_tutor.css">
+    <script src="https://kit.fontawesome.com/048c0de736.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+<header>
+    <div class="container header">
+        <img src="images/logo.png" alt="CACHORRO" width="100">
+        <nav>
+            <ul id="nav_links">
+                <li><a href="index.html">Inicio</a></li>
+                <li>Categorias
+                    <ul class="submenu">
+                        <li><a href="login_empresa.php">Pessoa Juridica</a></li>
+                        <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
+                        <li><a href="teste.php">PET</a></li>
+                    </ul></li>
+                <li>
+                    Cadastre-se
+                    <ul class="submenu">
+                        <li><a href="cadastrar_empresa.php">Pessoa Juridica</a></li>
+                        <li><a href="cadastrar_tutor.php">Pessoa Fisíca</a></li>
+                        <li><a href="cadastrar_pet.php">PET</a></li>
+                    </ul>
+                </li>
+                <li>Entrar
+                    <ul class="submenu">
+                        <li><a href="login_empresa.php">Pessoa Juridica</a></li>
+                        <li><a href="login_tutor.php">Pessoa Fisíca</a></li>
+                        <li><a href="teste.php">PET</a></li>
+                    </ul></li>
+                <div class="item-links">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
+</header>
 <h1>Cadastro de Tutor</h1>
-<form action="cadastrar_tutor.php" method="POST" onsubmit="return validarFormulario()">
-    <label for="nome">Nome Completo:</label>
-    <input type="text" id="nome" name="nome" required>
+<div class="form">
+    <div class="container">
+        <div class="form-box">
+        <form action="cadastrar_tutor.php" method="POST" onsubmit="return validarFormulario()">
 
-    <label for="data_nasc">Data de Nascimento:</label>
-    <input type="date" id="data_nasc" name="data_nasc" required>
+        <div>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="linha-2">
+            <div>
+                <label for="data_nasc">Data de Nascimento:</label>
+                <input type="date" id="data_nasc" name="data_nasc" required>
+            </div>
+            <div>
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required oninput="mascaraCPF(this.value); removerMensagemErro('cpf-error')">
+                <span id="cpf-error" class="error-message"></span>
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+    
+            <div>
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+            </div>
 
-    <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" name="cpf" required oninput="mascaraCPF(this.value); removerMensagemErro('cpf-error')">
-    <span id="cpf-error" class="error-message"></span>
+            <div>
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required oninput="mascaraCEP(this.value)">
+            </div>
+            <div>
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required>
+            </div>
+            <div>
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+            </div>
 
-    <label for="email">E-mail:</label>
-    <input type="text" id="email" name="email" required>
+            <div>
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required>
+            </div>
+        </div>
 
-    <label for="telefone">Telefone:</label>
-    <input type="text" id="telefone" name="telefone" required>
+        <div class="linha-1">
+            <div>
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" id="logradouro" name="logradouro" required>
+            </div>
+        </div>
 
-    <label for="cep">CEP:</label>
-    <input type="text" id="cep" name="cep" required oninput="mascaraCEP(this.value)">
+        <div>
+            <div>
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" name="complemento" required>
+            </div>
 
-    <label for="estado">Estado:</label>
-    <input type="text" id="estado" name="estado" required>
+            <div>
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required>
+            </div>
+        </div>
+       
+        <div class="linha-1">
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required oninput="removerMensagemErro('senha-error')">
+                <span id="senha-error" class="error-message"></span>
+            </div>
 
-    <label for="cidade">Cidade:</label>
-    <input type="text" id="cidade" name="cidade" required>
-
-    <label for="bairro">Bairro:</label>
-    <input type="text" id="bairro" name="bairro" required>
-
-    <label for="logradouro">Logradouro:</label>
-    <input type="text" id="logradouro" name="logradouro" required>
-
-    <label for="complemento">Complemento:</label>
-    <input type="text" id="complemento" name="complemento" required>
-
-    <label for="numero">Número:</label>
-    <input type="text" id="numero" name="numero" required>
-
-    <label for="senha">Senha:</label>
-    <input type="password" id="senha" name="senha" required oninput="removerMensagemErro('senha-error')">
-    <span id="senha-error" class="error-message"></span>
-
-    <label for="confirmar_senha">Confirmar Senha:</label>
-    <input type="password" id="confirmar_senha" name="confirmar_senha" required oninput="removerMensagemErro('senha-error')">
-
-    <input type="submit" name="cadastrar" value="Cadastrar">
-</form>
+            <div>
+                <label for="confirmar_senha">Confirmar Senha:</label>
+                <input type="password" id="confirmar_senha" name="confirmar_senha" required oninput="removerMensagemErro('senha-error')">
+            </div>
+        </div>
+        <input type="submit" name="cadastrar" value="Cadastrar">
+    </form>
+    </div>
+    </div>
+</div>
 </body>
 <script>
     function validarFormulario() {
