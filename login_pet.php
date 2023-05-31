@@ -29,12 +29,11 @@ if(isset($_POST["entrar"]))
         <nav>
             <ul id="nav_links">
                 <li><a href="index.php">Inicio</a></li>
-                <li>
-                    Cadastre-se
+                <li>Categorias
                     <ul class="submenu">
-                        <li><a href="cadastrar_empresa.php">Pessoa Juridica</a></li>
-                        <li><a href="cadastrar_tutor.php">Pessoa Fisíca</a></li>
-                        <li><a href="cadastrar_pet.php">PET</a></li>
+                        <li><a href="">Cachorro</a></li>
+                        <li><a href="">Gatos</a></li>
+                        <li><a href="">Peixes</a></li>
                     </ul>
                 </li>
                 <li>
