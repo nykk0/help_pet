@@ -188,6 +188,7 @@ session_start();
                             <img src="images/gato2.png" alt="" width="150" height="150">
                         </div>
                         <button>Compre agora</button>
+
                     </div>
                 </div>
             </div>
